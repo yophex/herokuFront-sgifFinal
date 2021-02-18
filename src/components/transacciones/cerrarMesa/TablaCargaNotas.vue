@@ -63,7 +63,7 @@ export default {
         if (!isNaN(alumno.nota)) {
           if (alumno.esAusente) {
             alumno.condicion = "Ausente";
-          } else if (alumno.nota < 0 || alumno.nota > 10) {
+          } else if (alumno.nota < 1 || alumno.nota > 10) {
             esError = true;
             this.$emit("error-operacion", this.mensajeErrorNota);
             break;

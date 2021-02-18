@@ -129,7 +129,7 @@ export default {
       this.mesaSeleccionada.alumnos.forEach((alumno) => {
         let nuevoAlumno = {
           ...alumno,
-          nota: "0",
+          nota: "1",
           condicion: "",
         };
         nuevosAlumnos.push(nuevoAlumno);
@@ -162,8 +162,9 @@ export default {
       setTimeout(() => {
         this.$refs.cartelLoading.desactivar();
         this.$refs.cartelExito.abrirCartel(this.mensajeExito);
-        console.log("para la mesa de oid", this.mesaSeleccionada.oidMesa);
-        console.log("los resultados son:", resultados);
+        this.mostrarCargaNotas = false;
+        // console.log("para la mesa de oid", this.mesaSeleccionada.oidMesa);
+        // console.log("los resultados son:", resultados);
       }, 2000);
     },
   },
